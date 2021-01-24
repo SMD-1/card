@@ -44,19 +44,65 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: 0.5s;
+}
 
+.container .card:hover .box{
+    transform: translateY(-50px);
+    transition: 0.5s;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    background: linear-gradient(90deg, #4e54c8, #8f94fb);
 }
 .container .card .box .content{
     text-align: center;
-    padding: 20px;
+    padding: 10px;
 }
 .container .card .box .content h2{
     position: absolute;
-    top: -10px;
-    right: 25px;
-    font-size: 6em;
-    color: rgba(0,0,0,0.05);
-    
+    font-weight: 600;
+    top: -30px;
+    right: 20px;
+    font-size: 9em;
+    color: rgba(0,0,0,0.02);  
+    transition: 0.5s;
+    pointer-events: none;
 }
+.container .card:hover .box .content h2{
+    color: rgba(0,0,0,0.06);  
+}
+.container .card .box .content h3{
+    font-size: 2em;
+    color: #777;
+    z-index: 1;
+    transition: 0.5s;
+}
+.container .card:hover .box .content h3,
+.container .card:hover .box .content p{
+    color: #fff;
+}
+.container .card .box .content p{
+    font-size: 1rem;
+    font-weight: 400;
+    color: #777;
+    z-index: 1;
+    transition: 0.5s;
+}
+.container .card .box .content a{
+    position: relative;
+    display: inline-block;
+    padding: 8px 20px;
+    background: rgb(38, 158, 228);
+    color: #fff;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 400;
+    margin-top: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.container .card .box .content a:hover{
+    background: #ff5685;
+}
+
+
 
 
